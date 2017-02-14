@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import sugartensor as tf
+import matplotlib
+matplotlib.use('Agg') # Force matplotlib to not use any Xwindows backend.
 import matplotlib.pyplot as plt
 
 __author__ = 'buriburisuri@gmail.com'
@@ -57,7 +59,7 @@ with tf.Session() as sess:
 
         # restore parameters
         saver = tf.train.Saver()
-        saver.restore(sess, tf.train.latest_checkpoint('asset/train/ckpt'))
+        saver.restore(sess, tf.train.latest_checkpoint('asset/train'))
 
         # run generator
         gt, low, bicubic, sr = sess.run([x.sg_squeeze(), x_nearest, x_bicubic, gen])
