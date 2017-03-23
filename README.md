@@ -13,7 +13,7 @@ and this is the key idea of this paper. I think this idea looks promising and my
 
 ## Dependencies
 
-1. tensorflow >= rc0.11 
+1. tensorflow==0.12.rc-01
 1. [sugartensor](https://github.com/buriburisuri/sugartensor) >= 0.0.1.7
 
 ## Training the network
